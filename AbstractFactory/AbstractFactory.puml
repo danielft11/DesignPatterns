@@ -1,0 +1,38 @@
+﻿@startuml
+namespace AbstractFactory.Abstract {
+    abstract class AbstractFactory {
+        {abstract} + CreateMediaSocialFacebook() : MediaSocial
+        {abstract} + CreateMediaSocialTwitter() : MediaSocial
+    }
+}
+
+namespace AbstractFactory.Abstract.Products {
+    abstract class MediaSocial {
+        {abstract} + Post(title: string, body: string)
+        {abstract} + Like()
+    }
+}
+
+namespace AbstractFactory.Factory.Products {
+    class MediaSocialFacebook extends MediaSocial {
+        + Post(title: string, body: string)
+        + Like()
+    }
+
+    class MediaSocialTwitter extends MediaSocial {
+        + Post(title: string, body: string)
+        + Like()
+    }
+}
+
+namespace AbstractFactory.Factory {
+    class MediaSocialFactory extends AbstractFactory {
+        + CreateMediaSocialFacebook() : MediaSocial
+        + CreateMediaSocialTwitter() : MediaSocial
+    }
+}
+
+AbstractFactory.Abstract::AbstractFactory --|> AbstractFactory.Factory::MediaSocialFactory
+AbstractFactory.Abstract.Products::MediaSocial <|-- AbstractFactory.Factory.Products::MediaSocialFacebook
+AbstractFactory.Abstract.Products::MediaSocial <|-- AbstractFactory.Factory.Products::MediaSocialTwitter
+@enduml

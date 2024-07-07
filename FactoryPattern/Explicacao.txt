@@ -1,0 +1,15 @@
+﻿Factory Method => Criação de Produtos dentro de suas subclasses.	
+
+- Definir uma interface para criar um objeto, mas deixarem as subclasses decidirem qual classe instanciar.
+- Permite adiar a instanciação para as subclasses.
+- Retira a responsabilidade da classe cliente de instanciar objetos.
+- Reduz ou até mesmo elimina o acoplamento da classe cliente.
+
+Integrantes:
+
+Product -> Produto abstrato base
+ConcreteProduct -> Produto concreto que implementa o produto base
+Creator -> Define a fábrica abstrata que irá retornar um Factory Method (produto base)
+ConcreteCreator -> Responsável por instanciar o produto concreto (implementa o creater)
+
+Fonte: https://www.youtube.com/watch?v=5au2aDxEtqU

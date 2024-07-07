@@ -1,0 +1,33 @@
+﻿@startuml
+namespace FactoryPattern {
+
+    abstract class Creator {
+        {abstract} + FactoryMethod() : PagamentoProduct
+    }
+
+    class ConcreteCreator extends Creator {
+        + FactoryMethod() : PagamentoProduct
+    }
+
+    abstract class PagamentoProduct {
+        - _descricao : string
+        - _tipo : string
+        {abstract} + Pagar(valor: double)
+    }
+
+    class PagamentoAluguelCP extends PagamentoProduct {
+        + PagamentoAluguelCP()
+        + Pagar(valor: double)
+    }
+
+    class PagamentoCompraInternacionalCP extends PagamentoProduct {
+        + PagamentoCompraInternacionalCP()
+        + Pagar(valor: double)
+    }
+        
+    Creator <|-- ConcreteCreator
+    PagamentoProduct <|-- PagamentoAluguelCP
+    PagamentoProduct <|-- PagamentoCompraInternacionalCP
+}
+
+@enduml
