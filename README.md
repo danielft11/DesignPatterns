@@ -1,10 +1,16 @@
-# DesignPatterns
-Projeto para estudo de Padrões de Projeto
 
-# Padrões Comportamentais
+# Design Patterns
 
-# Chain Of Responsability
+Projeto para estudo de padrões de projeto que fazem parte dos padrões definidos no Gang Of Four.
 
-![image](https://github.com/user-attachments/assets/b3599f9d-dc29-4916-8fdd-0e7dafbf328a)
+## Padrões Criacionais
 
+## Padrões Estruturais
+
+## Padrões Comportamentais
+
+### Padrão Chain Of Responsability
+
+Diagrama UML: 
+![image](https://github.com/user-attachments/assets/9dcc9078-8792-4f0d-ac0e-6d8aaedad593)
 
