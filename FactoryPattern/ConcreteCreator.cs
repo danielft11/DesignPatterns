@@ -2,8 +2,13 @@
 
 public class ConcreteCreator : Creator
 {
-    public override PagamentoProduct FactoryMethod()
+    public override PagamentoProduct FactoryMethodCompraInternacional()
     {
         return new PagamentoCompraInternacionalCP();
+    }
+
+    public override PagamentoProduct FactoryMethodCompraNacional()
+    {
+        return new PagamentoCompraNacionalCP();
     }
 }

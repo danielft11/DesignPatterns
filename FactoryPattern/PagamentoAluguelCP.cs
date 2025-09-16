@@ -5,11 +5,11 @@ public class PagamentoAluguelCP : PagamentoProduct
 {
     public PagamentoAluguelCP()
     {
-        this._descricao = "Aluguel";
-        this._tipo = "Boleto";
+        this.Descricao = "Aluguel";
+        this.Tipo = "Boleto";
     }
     public override void Pagar(double valor)
     {
-        Console.WriteLine($"A conta {_descricao} foi paga via {_tipo} no valor de R$ {valor}.");
+        Console.WriteLine($"A conta {Descricao} foi paga via {Tipo} no valor de R$ {valor}.");
     }
 }

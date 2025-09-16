@@ -5,11 +5,11 @@ public class PagamentoCompraInternacionalCP : PagamentoProduct
 {
     public PagamentoCompraInternacionalCP()
     {
-        this._descricao = "Compra Internacional";
-        this._tipo = "Cartão de Crédito";    
+        Descricao = NATIONAL_PURCHASE;
+        Tipo = PIX_TYPE;    
     }
     public override void Pagar(double valor)
     {
-        Console.WriteLine($"A conta {_descricao} foi paga via {_tipo} no valor de $ {valor}.");
+        Console.WriteLine($"A conta {Descricao} foi paga via {Tipo} no valor de $ {valor}.");
     }
 }

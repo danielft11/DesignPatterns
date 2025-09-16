@@ -2,7 +2,7 @@
 
 /* Código antigo com alto acoplamento
  
-var pagamento = new PagamentoProduct
+var compra = new PagamentoProduct
 {
   Descricao = "Aluguel",
   Tipo = "Boleto",
@@ -16,14 +16,16 @@ var pagamentoCompraInternacional = new PagamentoProduct
   Valor = 250
 };
 
-pagamento.Pagar();
+compra.Pagar();
 pagamentoCompraInternacional.Pagar();
 
 */
 
 Creator creator = new ConcreteCreator();
 
-var pagamento = creator.FactoryMethod();
+var compraInternacional = creator.FactoryMethodCompraInternacional();
+compraInternacional.Pagar(2000);
 
-pagamento.Pagar(2000);
+var compraNacional = creator.FactoryMethodCompraNacional();
+compraNacional.Pagar(1500);
 

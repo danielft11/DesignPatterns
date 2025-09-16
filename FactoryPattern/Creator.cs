@@ -2,5 +2,6 @@
 
 public abstract class Creator
 {
-    public abstract PagamentoProduct FactoryMethod();
+    public abstract PagamentoProduct FactoryMethodCompraInternacional();
+    public abstract PagamentoProduct FactoryMethodCompraNacional();
 }
